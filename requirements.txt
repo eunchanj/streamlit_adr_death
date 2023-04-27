@@ -3,7 +3,7 @@ pandas
 numpy
 numba==0.53.1
 pickleshare==0.7.5
-streamlit==0.88.0
+streamlit
 Pillow
 matplotlib
 xgboost==1.2.0
