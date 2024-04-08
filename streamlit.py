@@ -79,7 +79,7 @@ def model_prediction(
     # predict probability by model
     prob = model.predict_proba(sample_case_features)[:,1]
             
-    return prob
+    return np.float64(prob)
 
 def data_mapping(df):
     """this function preprocess the user input
@@ -155,7 +155,7 @@ def main():
 
         st.success('probability : {}'.format(result))
     
-        if float(prob) < 0.432 :
+        if prob < 0.432 :
             st.success("threshold : 0.432")
             st.image(im_sur)
             st.bar_chart(data=shap_bar)
